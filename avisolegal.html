@@ -1,0 +1,384 @@
+<?php
+
+$conn = mysqli_connect('localhost','root','','contact_db') or die('connection failed');
+
+if(isset($_POST['submit'])){
+
+   $name = mysqli_real_escape_string($conn, $_POST['name']);
+   $email = mysqli_real_escape_string($conn, $_POST['email']);
+   $number = $_POST['number'];
+   $date = $_POST['date'];
+
+   $insert = mysqli_query($conn, "INSERT INTO `contact_form`(name, email, number, date) VALUES('$name','$email','$number','$date')") or die('query failed');
+
+   if($insert){
+      $message[] = 'appointment made successfully!';
+   }else{
+      $message[] = 'appointment failed';
+   }
+
+}
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Clínica Dental Isabel Carmona</title>
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+   <!-- bootstrap cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/css/bootstrap.min.css">
+
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+   
+<!-- header section starts  -->
+
+<header class="header fixed-top">
+
+
+   <div class="container-contact">
+      <div class="contacto-header">
+         <div class="box-contact">
+         <a href="mailto:fotografiadanielness@gmail.com" title="Contactar 
+         por Correo"><i class="fas fa-envelope"></i></a>
+         <a href="tel:34697170319" title="Contactar por Teléfono"><i class="fas fa-phone"></i></a>
+         </div>
+      </div>
+   </div>
+
+
+   <div class="container">
+
+      <div class="row align-items-center justify-content-between">
+
+         <div class="logo"> <img src="./images/logo pequeño.png" alt=""></div>
+
+         <!-- <a href="#home" class="logo">dental<span>Care.</span></a> -->
+
+         <nav class="nav">
+            <a href="index.html" id="home">Principal</a>
+            
+         </nav>
+
+         <!-- <a href="#contact" class="link-btn">make appointment</a> -->
+
+         <div id="menu-btn" class="fas fa-bars"></div>
+
+      </div>
+
+   </div>
+
+</header>
+
+<!-- header section ends -->
+
+<!-- home section starts  -->
+
+<section class="home" id="home">
+
+   <div class="container">
+
+      <div class="row min-vh-100 align-items-center">
+         <div class="content text-center text-md-left">
+            <h3>let us brighten your smile</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium itaque, quasi aliquam alias tempora voluptatibus.</p>
+            <!-- <a href="#contact" class="link-btn">make appointment</a> -->
+         </div>
+      </div>
+
+   </div>
+
+</section>
+
+<!-- home section ends -->
+
+<!-- about section starts  -->
+
+<section class="about" id="about">
+
+   <div class="container">
+
+            <span>Aviso Legal</span>
+            <p>
+                
+
+De acuerdo a lo dispuesto en la Ley 34/2002, de Servicios de la Sociedad de la Información y del Comercio Electrónico, y en la normativa vigente en materia de Protección de Datos de Carácter Personal Ley 15/1999 y Real Decreto 1720/2007, le informamos que la titularidad del dominio de nuestro Sitio Web www.isabelcarmona.com corresponde a la empresa Clínica Dental Isabel Carmona Sánchez S.A, en adelante “LA EMPRESA”, con C.I.F 44203455P y domicilio social en la calle Retama nº 9, (21130) de Mazagón.
+
+LA EMPRESA le da la bienvenida y le invita a leer atentamente las Condiciones Generales de Uso de este Sito Web (en adelante, las “Condiciones Generales de Uso”) que describen los términos y condiciones que serán aplicables a su navegación por el mismo, de conformidad con lo establecido en la normativa española de aplicación. Dado que LA EMPRESA podría modificar en el futuro estas Condiciones de Uso, le recomendamos que las visite periódicamente para estar debidamente informado de los cambios realizados.
+
+Con el ánimo de que el uso del Sitio Web se ajuste a criterios de transparencia, claridad y sencillez, LA EMPRESA informa al Usuario que cualquier sugerencia, duda o consulta sobre las Condiciones Generales de Uso será recibida y solucionada contactando con LA EMPRESA a través del tfno. 959536353, o en la dirección de correo electrónico: isabelcarmonasanchez@hotmail.com
+
+    Objeto
+
+LA EMPRESA suministra el contenido y los servicios que están disponibles en el Sitio Web, con sujeción a las presentes Condiciones Generales de Uso así como a la Política sobre Tratamiento de Datos Personales (en adelante, la “Política de Privacidad”). El acceso a este Sitio Web o su utilización en cualquier forma le otorga la calificación de “Usuario” e implica la aceptación sin reservas de todas y cada una de las presentes Condiciones Generales de Uso, reservándose LA EMPRESA el derecho a modificarlas en cualquier momento. En consecuencia, será responsabilidad de todo Usuario, la atenta lectura de las Condiciones Generales de Uso vigentes en cada una de las ocasiones en que acceda a este Sitio Web, por lo que si éste no está de acuerdo con cualquiera de los extremos aquí dispuestos, deberá abstenerse respecto al uso del presente Sitio Web.
+
+Asimismo, queda advertido de que, en ocasiones, se podrán establecer condiciones particulares para la utilización en el Sitio Web de contenidos y/o servicios específicos, la utilización de dichos contenidos o servicios implicará la aceptación de las condiciones particulares en ellos especificadas.
+
+    Servicios
+
+A través del Sitio Web, LA EMPRESA ofrece la posibilidad de:
+
+    Obtener información acerca de la actividad de la empresa y de los servicios prestados por la misma, así como solicitar asesoramiento.
+    Solicitar asesoramiento en Conservadora, Odontopediatría, Prostodoncia, Implantología, Cirugía Estética, Ortodoncia, Dirección.
+    Contactar con LA EMPRESA para realizar consultas o sugerencias, a través de un formulario de Contacto.
+
+(En adelante los “Servicios”).
+
+    Privacidad y Tratamiento de Datos
+
+Cuando para el acceso a determinados contenidos o servicios sea necesario facilitar datos de carácter personal, los Usuarios garantizarán su veracidad, exactitud, autenticidad y vigencia. LA EMPRESA dará a dichos datos el tratamiento automatizado que corresponda en función de su naturaleza o finalidad, en los términos indicados en la sección de Política de Privacidad.
+
+En aquellos supuestos en que un usuario decida libremente contactar con otro sitio web enlazado a través de este Sitio Web, lo hará por su propia cuenta y riesgo, no asumiendo LA EMPRESA responsabilidades derivadas de la relación surgida entre el Usuario el titular del sitio web enlazado.
+
+    Propiedad Industrial e Intelectual
+
+El Usuario reconoce y acepta que todos los contenidos que se muestran en el Sitio Web y en especial, diseños, textos, imágenes, logos, iconos, botones, software, nombres comerciales, marcas, o cualesquiera otros signos susceptibles de utilización industrial y/o comercial están sujetos a derechos de Propiedad Intelectual y todas las marcas, nombres comerciales o signos distintivos, todos los derechos de propiedad industrial e intelectual, sobre los contenidos y/o cualesquiera otros elementos insertados en el página, que son propiedad exclusiva de LA EMPRESA y/o de terceros, quienes tienen el derecho exclusivo de utilizarlos en el tráfico económico. Por todo ello el Usuario se compromete a no reproducir, copiar, distribuir, poner a disposición o de cualquier otra forma comunicar públicamente, transformar o modificar tales contenidos, manteniendo indemne a LA EMPRESA de cualquier reclamación que se derive del incumplimiento de tales obligaciones.
+
+En ningún caso el acceso al Sitio Web implica ningún tipo de renuncia, transmisión, licencia o cesión total ni parcial de dichos derechos, salvo que se establezca expresamente lo contrario. Las presentes Condiciones Generales de Uso del Sitio Web no confieren al Usuario ningún otro derecho de utilización, alteración, explotación, reproducción, distribución o comunicación pública del Sitio Web y/o de sus Contenidos distintos de los aquí expresamente previstos. Cualquier otro uso o explotación de cualesquiera derechos estará sujeto a la previa y expresa autorización específicamente otorgada a tal efecto por LA EMPRESA o el tercero titular de los derechos afectados.
+
+Los contenidos, textos, fotografías, diseños, logotipos, imágenes, programas de ordenador, códigos fuente y, en general, cualquier creación intelectual existente en este sitio, así como el propio sitio en su conjunto, como obra artística multimedia, están protegidos como derechos de autor por la legislación en materia de Propiedad Intelectual. LA EMPRESA es titular de los elementos que integran el diseño gráfico del Sitio Web, lo menús, botones de navegación, el código HTML, los textos, imágenes, texturas, gráficos y cualquier otro contenido del Sitio Web o, en cualquier caso dispone de la correspondiente autorización para la utilización de dichos elementos. El contenido dispuesto en el Sitio Web no podrá ser reproducido ni en todo ni en parte, ni transmitido, ni registrado por ningún sistema de recuperación de información, en ninguna forma ni en ningún medio, a menos que se cuente con la autorización previa, por escrito, de la citada entidad.
+
+Asimismo queda prohibido suprimir, eludir y/o manipular el «copyright» así como los dispositivos técnicos de protección, o cualesquiera mecanismos de información que pudieren contener los contenidos. El Usuario de este Sitio Web se compromete a respetar los derechos enunciados y a evitar cualquier actuación que pudiera perjudicarlos, reservándose en todo caso LA EMPRESA el ejercicio de cuantos medios o acciones legales le correspondan en defensa de sus legítimos derechos de propiedad intelectual e industrial.
+
+    Obligaciones y Responsabilidades del Usuario del Sitio Web
+
+El Usuario se compromete a:
+
+    Hacer un uso adecuado y lícito del Sitio Web así como de los contenidos y servicios, de conformidad con: (i) la legislación aplicable en cada momento; (ii) las Condiciones Generales de Uso del Sitio Web; (iii) la moral y buenas costumbres generalmente aceptadas y (iv) el orden público.
+    Proveerse de todos los medios y requerimientos técnicos que se precisen para acceder al Sitio Web.
+    Facilitar información veraz al cumplimentar con sus datos de carácter personal los formularios contenidos en el Sitio Web y a mantenerlos actualizados en todo momento de forma que responda, en cada momento, a la situación real del Usuario. El Usuario será el único responsable de las manifestaciones falsas o inexactas que realice y de los perjuicios que cause a LA EMPRESA o a terceros proveedores, por la información que facilite.
+
+El Usuario deberá asimismo abstenerse de:
+
+    Hacer un uso no autorizado o fraudulento del Sitio Web y/o de los contenidos con fines o efectos ilícitos, prohibidos en las presentes Condiciones Generales de Uso, lesivos de los derechos e intereses de terceros, o que de cualquier forma puedan dañar, inutilizar, sobrecargar, deteriorar o impedir la normal utilización de los servicios o los documentos, archivos y toda clase de contenidos almacenados en cualquier equipo informático.
+    Acceder o intentar acceder a recursos o áreas restringidas del Sitio Web, sin cumplir las condiciones exigidas para dicho acceso.
+    Provocar daños en los sistemas físicos o lógicos del Sitio Web, de sus proveedores o de terceros.
+    Introducir o difundir en la red virus informáticos o cualesquiera otros sistemas físicos o lógicos que sean susceptibles de provocar daños en los sistemas físicos o lógicos de LA EMPRESA, de sus proveedores o de terceros.
+    Intentar acceder, utilizar y/o manipular los datos de LA EMPRESA, terceros proveedores y otros Usuarios.
+    Reproducir o copiar, distribuir, permitir el acceso del público a través de cualquier modalidad de comunicación pública, transformar o modificar los contenidos, a menos que se cuente con la autorización del titular de los correspondientes derechos o ello resulte legalmente permitido.
+    Suprimir, ocultar o manipular las notas sobre derechos de propiedad intelectual o industrial y demás datos identificativos de los derechos de LA EMPRESA o de protección o cualesquiera mecanismos de información que puedan insertarse en los contenidos.
+    Obtener o intentar obtener los contenidos empleando para ello medios o procedimientos distintos de los que, según los casos, se hayan puesto a su disposición a este efecto o se hayan indicado expresamente en los sitios web donde se encuentren los contenidos o, en general, de los que se empleen habitualmente en Internet por no entrañar un riesgo de daño o inutilización del sitio web y/o de los contenidos.
+
+En particular, y a título meramente indicativo y no exhaustivo, el Usuario se compromete a no transmitir, difundir o poner a disposición de terceros informaciones, datos, contenidos, mensajes, gráficos, dibujos, archivos de sonido y/o imagen, fotografías, grabaciones, software y, en general, cualquier clase de material que:
+
+    De cualquier forma sea contrario, menosprecie o atente contra los derechos fundamentales y las libertades públicas reconocidas constitucionalmente, en los Tratados Internacionales y en el resto de la legislación vigente.
+    Induzca, incite o promueva actuaciones delictivas, denigratorias, difamatorias, violentas o, en general, contrarias a la ley, a la moral, a las buenas costumbres generalmente aceptadas o al orden público.
+
+    Induzca, incite o promueva actuaciones, actitudes o pensamientos discriminatorios por razón de sexo, raza, religión, creencias, edad o condición.
+
+    Incorpore, ponga a disposición o permita acceder a productos, elementos, mensajes y/o servicios delictivos, violentos, ofensivos, nocivos, degradantes o, en general, contrarios a la ley, a la moral y a las buenas costumbres generalmente aceptadas o al orden público.
+
+    Induzca o pueda inducir a un estado inaceptable de ansiedad o temor.
+
+    Induzca o incite a involucrarse en prácticas peligrosas, de riesgo o nocivas para la salud y el equilibrio psíquico
+
+    Se encuentre protegido por la legislación en materia de propiedad intelectual o industrial perteneciente a LA EMPRESA o a terceros sin que haya sido autorizado el uso que se pretenda realizar.
+
+    Sea contrario al honor, a la intimidad personal y familiar o a la propia imagen de las personas.
+
+    Constituya cualquier tipo de publicidad inconsentida.
+
+    Incluya cualquier tipo de virus o programa que impida el normal funcionamiento del Sitio Web.
+
+Si para acceder a algunos de los servicios y/o contenidos del Sitio Web, se le proporcionara una contraseña, el Usuario se obliga a usarla de manera diligente, manteniéndola en todo momento en secreto. En consecuencia, será responsable de su adecuada custodia y confidencialidad, comprometiéndose a no cederla a terceros, de manera temporal o permanente, ni a permitir el acceso a los mencionados servicios y/o contenidos por parte de personas ajenas. Igualmente, se obliga a notificar a LA EMPRESA cualquier hecho que pueda suponer un uso indebido de su contraseña, como, a título enunciativo, su robo, extravío o el acceso no autorizado, con el fin de proceder a su inmediata cancelación. En consecuencia, mientras no efectúe la notificación anterior, LA EMPRESA quedará eximida de cualquier responsabilidad que pudiera derivarse del uso indebido de su contraseña, siendo de su responsabilidad cualquier utilización ilícita de los contenidos y/o servicios del Sitio Web por cualquier tercero ilegítimo.
+
+Si de manera negligente o dolosa incumpliera cualquiera de las obligaciones establecidas en las presentes Condiciones Generales de Uso, responderá por todos los daños y perjuicios que de dicho incumplimiento pudieran derivarse para LA EMPRESA.
+
+    Responsabilidades
+
+LA EMPRESA no garantiza el acceso continuado, ni la correcta visualización, descarga o utilidad de los elementos e informaciones contenidas en las páginas enlazadas a este Sitio Web, y que pueden verse impedidos, dificultados o interrumpidos por factores o circunstancias que están fuera de su control. LA EMPRESA no se hace responsable de las decisiones que pudieran adoptarse como consecuencia del acceso a los contenidos o informaciones ofrecidas a través de dichos sitios enlazados.
+
+LA EMPRESA podrá interrumpir el servicio o resolver de modo inmediato la relación con el Usuario si detecta que un uso de su Sitio Web o de cualquiera de los servicios ofertados en el mismo es contrario a las presentes Condiciones Generales de Uso. LA EMPRESA no se hace responsable por daños, perjuicios, pérdidas, reclamaciones o gastos derivados del uso del Sitio Web. Únicamente será responsable de eliminar, lo antes posible, los contenidos que puedan generar tales perjuicios, siempre que así se notifique. En especial no será responsable de los perjuicios que se pudieran derivar, entre otros, de:
+
+    Interferencias, interrupciones, fallos, omisiones, averías telefónicas, retrasos, bloqueos o desconexiones en el funcionamiento del sistema electrónico, motivadas por deficiencias, sobrecargas y errores en las líneas y redes de telecomunicaciones, o por cualquier otra causa ajena al control de LA EMPRESA.
+    Intromisiones ilegítimas mediante el uso de programas malignos de cualquier tipo y a través de cualquier medio de comunicación, tales como virus informáticos o cualesquiera otros.
+    Abuso indebido o inadecuado del Sitio Web.
+    Errores de seguridad o navegación producidos por un mal funcionamiento del navegador o por el uso de versiones no actualizadas del mismo. Los administradores de LA EMPRESA se reservan el derecho de retirar, total o parcialmente, cualquier contenido o información presente en el Sitio Web.
+
+LA EMPRESA excluye cualquier responsabilidad por los daños y perjuicios de toda naturaleza que pudieran deberse a la mala utilización de los servicios de libre disposición y uso por parte de los Usuarios de Sitio Web. Asimismo, LA EMPRESA queda exonerada de cualquier responsabilidad por contenidos e informaciones que puedan ser recibidas como consecuencia de un uso ilícito o incorrecto de dichos servicios, podrá ser el Usuario reclamado por LA EMPRESA de los daños o perjuicios causados.
+
+El Usuario defenderá, indemnizará y mantendrá a LA EMPRESA indemne frente a cualesquiera daños y perjuicios que se deriven de reclamaciones, acciones o demandas de terceros como consecuencia de su acceso o uso del Sitio Web. Asimismo, el Usuario se obliga a indemnizar a LA EMPRESA frente a cualesquiera daños y perjuicios, que se deriven del uso por su parte de “robots”, “spiders”, “crawlers” o herramientas similares empleadas con el fin de recabar o extraer datos o de cualquier otra actuación por su parte que imponga una carga irrazonable sobre el funcionamiento del Sitio Web.
+
+    Hipervínculos
+
+El Usuario se obliga a no reproducir de ningún modo, ni siquiera mediante un hiperenlace o hipervínculo, el Sitio Web de LA EMPRESA, así como ninguno de sus contenidos, salvo autorización expresa y por escrito de LA EMPRESA.
+
+El Sitio Web incluye enlaces a otros sitios web gestionados por terceros, conforme con ello, LA EMPRESA no se responsabiliza del contenido de dichos sitios web, ni se sitúa en una posición de garante ni/o de parte ofertante de los servicios y/o información que se puedan ofrecer a través de dichos sitios webs. Por lo que cualquier reclamación relacionada con los servicios prestados a través de los sitios web enlazados, tendrán que ser dirigidas a los titulares de dichos sitios web.
+
+Se concede al Usuario un derecho limitado, revocable y no exclusivo a crear enlaces a la página principal del Sitio Web exclusivamente para uso privado y no comercial. Los sitios web que incluyan enlace a nuestro Sitio Web (i) no podrán dar a entender que LA EMPRESA recomienda ese sitio web o sus servicios o productos; (ii) no podrán falsear su relación con LA EMPRESA ni afirmar que LA EMPRESA ha autorizado tal enlace, ni incluir marcas, denominaciones, nombres comerciales, logotipos u otros signos distintivos de LA EMPRESA ; (iii) no podrán incluir contenidos que puedan considerarse de mal gusto, obscenos, ofensivos, controvertidos, que inciten a la violencia o la discriminación por razón de sexo, raza o religión, contrarios al orden público o ilícitos; (iv) no podrán enlazar a ninguna página del Sitio Web distinta de la página principal; (v) deberá enlazar con la propia dirección del Sitio Web, sin permitir que el sitio web que realice el enlace reproduzca el Sitio Web como parte de su web o dentro de uno de sus “frames” o crear un “browser” sobre cualquiera de las páginas del Sitio Web. LA EMPRESA podrá solicitar, en cualquier momento, que elimine cualquier enlace al Sitio Web, después de lo cual deberá proceder de inmediato a su eliminación. LA EMPRESA no puede controlar la información, contenidos, productos o servicios facilitados por otros sitios web que tengan establecidos enlaces con destino al Sitio Web.
+
+En consecuencia, LA EMPRESA no asume ningún tipo de responsabilidad por cualquier aspecto relativo a tales sitios web.
+
+    Protección de datos
+
+Para utilizar algunos de los Servicios, los Usuarios deben proporcionar previamente ciertos datos de carácter personal. Para ello, LA EMPRESA tratará de forma automatizada los Datos Personales en cumplimiento con la Ley 15/1999 de 13 de diciembre de Protección de Datos de Carácter Personal y el RD de desarrollo 1720/2007. Para ello, el Usuario puede acceder a la política seguida en el tratamiento de los datos personales, establecida en la Política de Privacidad.
+
+    Cookies
+
+LA EMPRESA se reserva el derecho de utilizar la tecnología “cookie” en el Sitio Web, a fin de reconocerlo como Usuario frecuente y personalizar el uso que realice del Sitio Web mediante la preselección de su idioma, o contenidos más deseados o específicos. Las “cookies” utilizadas por el Sitio Web, o el tercero que actúe en su nombre, se asocian únicamente con un usuario anónimo y su ordenador, y no proporcionan por sí los datos personales del usuario.
+
+Las cookies son ficheros enviados a un navegador por medio de un servidor Web para registrar la navegación del Usuario en el Sitio Web, cuando el Usuario permita su recepción. A su vez podrá eliminar las “cookies” para lo cual deberá consultar las instrucciones de uso de su navegador.
+
+Gracias a las cookies, resulta posible que LA EMPRESA reconozca el navegador del ordenador utilizado por el Usuario con la finalidad de facilitar contenidos y ofrecer las preferencias de navegación u publicitarias que el Usuario, a los perfiles demográficos de los Usuarios así como para medir las visitas y parámetros del tráfico, controlar el progreso y número de entradas.
+
+No obstante, recuerda que puedes permitir, bloquear o eliminar estas cookies cuando quieras a través de las opciones de configuración de tu navegador.
+
+El usuario puede configurar su navegador para aceptar, o no, las cookies que recibe o para que el navegador le avise cuando un servidor quiera guardar una cookie o borrarlas de su ordenador. Puede encontrar las instrucciones en la configuración de seguridad en su navegador Web.
+
+Ejemplos:
+
+    Si utiliza Microsoft Internet Explorer, en la opción de menú Herramientas > Opciones de Internet > Privacidad > Configuración.
+    Si utiliza Firefox, en la opción de menú Herramientas > Opciones > Privacidad > Cookies.
+    Si utiliza Google Chrome, en la opción de menú Configuración > Privacidad
+    Si utiliza Safari, en la opción de menú Preferencias > Seguridad
+
+Puede hacer uso de la sección “Ayuda” que encontrará en la barra de herramientas de la mayoría de navegadores para cambiar los ajustes de su ordenador, sin embargo, algunas de las características de nuestros servicios online pueden no funcionar o pueden resultar más complicadas de acceder si rechaza todas las cookies.
+
+Muchos navegadores permiten activar un modo privado mediante el cual las cookies se borran siempre después de su visita. Dependiendo de cada navegador, este modo privado puede tener diferentes nombres, abajo puede encontrar una lista de los navegadores más comunes y los diferentes nombres de este “modo privado”:
+
+    Internet Explorer 8 y superior: InPrivate
+    FireFox 3.5 y superior: Navegación Privada
+    Google Chrome 10 y superior: Incógnito
+    Safari 2 y superior: Navegación Privada
+    Opera 10.5 y superior: Navegación Privada
+
+Por favor, lea atentamente la sección de ayuda de su navegador para conocer más acerca de cómo activar el “modo privado”. Podrá seguir visitando nuestra Web aunque su navegador esté en “modo privado”, no obstante, la experiencia de usuario puede no ser óptima y algunas utilidades pueden no funcionar.
+
+LA EMPRESA le agradece que active la aceptación de cookies, esto nos ayuda a obtener datos más precisos que nos permiten mejorar el contenido y el diseño de nuestra página Web para adaptarlo a sus preferencias.
+
+Recuerda siempre acceder a la información de soporte más actualizada de dichos navegadores para conocer el modo en que puedes eliminar las cookies, dado que el modo puede diferir entre distintas versiones y sistemas operativos.
+
+En el caso de que utilices cualquier otro navegador de Internet, te recomendamos que consultes las distintas opciones de gestión de cookies que pudiesen encontrarse disponibles en el mismo en cada momento.
+
+    Duración y terminación
+
+La prestación del servicio del presente Sitio Web y los demás servicios tienen en principio una duración indefinida. No obstante, LA EMPRESA podrá dar por terminado o suspender cualquiera de los servicios prestados a través del Sitio Web. Cuando sea ello posible, LA EMPRESA anunciará la terminación o suspensión de la prestación del servicio determinado.
+
+    Fuerza mayor
+
+LA EMPRESA no será responsable en caso de existir imposibilidad de prestar el servicio, si ésta se debe a interrupciones prolongadas del suministro eléctrico, líneas de telecomunicaciones, conflictos sociales, huelgas, rebelión, explosiones, inundaciones, actos y omisiones del Gobierno, y en general todos los supuestos de fuerza mayor o de caso fortuito.
+
+    Resolución de controversias. Ley aplicable y jurisdicción
+
+Las presentes Condiciones Generales de Uso, así como el uso del Sitio Web, se regirán por la legislación española. Cualquier controversia será resuelta ante los tribunales del domicilio de LA EMPRESA.
+
+En el supuesto de que cualquier estipulación de las presentes Condiciones Generales de Uso resultara inexigible o nula en virtud de la legislación aplicable o como consecuencia de una resolución judicial o administrativa, dicha inexigibilidad o nulidad no hará que las presentes Condiciones Generales de Uso resulten inexigibles o nulas en su conjunto. En dichos casos, LA EMPRESA procederá a la modificación o sustitución de dicha estipulación por otra que sea válida y exigible y que, en la medida de lo posible, consiga el objetivo y pretensión reflejados en la estipulación original.
+
+            </p>
+            
+         </div>
+
+      </div>
+
+   </div>
+
+</section>
+
+
+
+<!-- reviews section ends -->
+
+<!-- contact section starts  -->
+
+<!-- <section class="contact" id="contact">
+
+   <h1 class="heading">make appointment</h1>
+
+   <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+      <?php 
+         if(isset($message)){
+            foreach($message as $message){
+               echo '<p class="message">'.$message.'</p>';
+            }
+         }
+      ?>
+      <span>your name :</span>
+      <input type="text" name="name" placeholder="enter your name" class="box" required>
+      <span>your email :</span>
+      <input type="email" name="email" placeholder="enter your email" class="box" required>
+      <span>your number :</span>
+      <input type="number" name="number" placeholder="enter your number" class="box" required>
+      <span>appointment date :</span>
+      <input type="datetime-local" name="date" class="box" required>
+      <input type="submit" value="make appointment" name="submit" class="link-btn">
+   </form>  
+
+</section> -->
+
+<!-- contact section ends -->
+
+<!-- footer section starts  -->
+
+<!-- <div class="box">
+   <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3180.574611840676!2d-6.8320790843860255!3d37.139034256252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd11df2be26ab76b%3A0x1b0fb67390b5cbc9!2sCl%C3%ADnica%20Dental%20Isabel%20Carmona!5e0!3m2!1ses!2ses!4v1657101580287!5m2!1ses!2ses" width="500" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+</div> -->
+
+
+
+<section class="footer" id="contacto">
+
+   <div class="box-container container">
+
+      <div class="box"> 
+         <i class="fas fa-phone"></i>
+         <h3>Teléfonos</h3>
+         <p>959536353</p>
+         <p>689245514 (Móvil/Whatsapp)</p>
+      </div>
+      <a href="https://wa.me/34697170319?text=¡Hola!%20Me%20gustaría%20pedir%20hora%20para%20una%20revisión%20/%20consulta.%20Gracias!" class="whatsapp" target="_blank"> <i class="fa fa-whatsapp whatsapp-icon"></i></a>
+      
+      <!-- <div class="box">
+         <i class="fas fa-map-marker-alt"></i>
+         <h3>Dirección</h3>
+         <p>C/ Retama, 9 - B</p>
+      </div> -->
+
+      <div class="box">
+         <i class="fas fa-clock"></i>
+         <h3>Horario</h3>
+         <p>Lunes a Viernes</p>
+         <p>09:30 - 21,00 (horario ininterrumpido)</p>
+      </div>
+
+      <div class="box">
+         <i class="fas fa-envelope"></i>
+         <a href="mailto:fotografiadanielness@gmail.com"></a>
+         <h3>email</h3>
+         <p>isabelcarmonasanchez@hotmail.com</p>
+      </div>
+
+   </div>
+
+   <div class="credit"> &copy; <span>Todos los derechos reservados</span>  </div>
+   
+
+</section>
+
+<!-- footer section ends -->
+
+
+
+
+
+
+
+
+
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+
+</body>
+</html>

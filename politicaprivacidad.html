@@ -1,0 +1,245 @@
+<?php
+
+$conn = mysqli_connect('localhost','root','','contact_db') or die('connection failed');
+
+if(isset($_POST['submit'])){
+
+   $name = mysqli_real_escape_string($conn, $_POST['name']);
+   $email = mysqli_real_escape_string($conn, $_POST['email']);
+   $number = $_POST['number'];
+   $date = $_POST['date'];
+
+   $insert = mysqli_query($conn, "INSERT INTO `contact_form`(name, email, number, date) VALUES('$name','$email','$number','$date')") or die('query failed');
+
+   if($insert){
+      $message[] = 'appointment made successfully!';
+   }else{
+      $message[] = 'appointment failed';
+   }
+
+}
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Clínica Dental Isabel Carmona</title>
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+   <!-- bootstrap cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/css/bootstrap.min.css">
+
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+   
+<!-- header section starts  -->
+
+<header class="header fixed-top">
+
+
+   <div class="container-contact">
+      <div class="contacto-header">
+         <div class="box-contact">
+         <a href="mailto:fotografiadanielness@gmail.com" title="Contactar 
+         por Correo"><i class="fas fa-envelope"></i></a>
+         <a href="tel:34697170319" title="Contactar por Teléfono"><i class="fas fa-phone"></i></a>
+         </div>
+      </div>
+   </div>
+
+
+   <div class="container">
+
+      <div class="row align-items-center justify-content-between">
+
+         <div class="logo"> <img src="./images/logo pequeño.png" alt=""></div>
+
+         <!-- <a href="#home" class="logo">dental<span>Care.</span></a> -->
+
+         <nav class="nav">
+            <a href="index.html" id="home">Principal</a>
+            
+         </nav>
+
+         <!-- <a href="#contact" class="link-btn">make appointment</a> -->
+
+         <div id="menu-btn" class="fas fa-bars"></div>
+
+      </div>
+
+   </div>
+
+</header>
+
+<!-- header section ends -->
+
+<!-- home section starts  -->
+
+<section class="home" id="home">
+
+   <div class="container">
+
+      <div class="row min-vh-100 align-items-center">
+         <div class="content text-center text-md-left">
+            <h3>let us brighten your smile</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium itaque, quasi aliquam alias tempora voluptatibus.</p>
+            <!-- <a href="#contact" class="link-btn">make appointment</a> -->
+         </div>
+      </div>
+
+   </div>
+
+</section>
+
+<!-- home section ends -->
+
+<!-- about section starts  -->
+
+<section class="about" id="about">
+
+   <div class="container">
+
+            <span>Política de Privacidad</span>
+            <p>
+                
+
+De acuerdo a lo dispuesto en la Ley 34/2002, de Servicios de la Sociedad de la Información y del Comercio Electrónico, y en la normativa vigente en materia de Protección de Datos de Carácter Personal Ley 15/1999 y Real Decreto 1720/2007, le informamos que la titularidad del dominio de nuestro Sitio Web www.isabelcarmona.com corresponde a Isabel Carmona Sánchez, en adelante “LA EMPRESA”, con C.I.F 44203455P y domicilio social en la calle Retama nº 9, (21130) de Mazagón.
+
+LA EMPRESA garantiza la protección de todos los datos de carácter personal que el Usuario proporcione en el Sitio Web y, en cumplimiento de lo dispuesto en la Ley Orgánica 15/1999, de 13 de diciembre de Protección de Datos de Carácter Personal, en el Real Decreto 1720/2007 de 21 de diciembre y restante normativa de aplicación, le informa que:
+
+a) Todos los datos de carácter personal facilitados a LA EMPRESA quedarán incorporados en el fichero “USUARIOS DE LA WEB”, creado y mantenido bajo la responsabilidad de LA EMPRESA, el cual ha sido debidamente registrado en la Agencia Española de Protección de Datos.
+
+b) Los datos son recabados con las siguientes finalidades:
+ Resolver consultas o sugerencias sobre los servicios prestados por la empresa.
+ Prestar asesoramiento en Conservadora, Odontopedriatría, Prostodoncia, Implantología, Cirugía Estética, Ortodoncia, Dirección.
+
+c) En la recogida y el tratamiento de los datos de carácter personal se han adoptado las medidas de seguridad adecuadas para evitar la pérdida, el acceso no autorizado o la manipulación de los mismos, de acuerdo con lo establecido en el Real Decreto 1720/2007, de 21 de diciembre.
+
+d) LA EMPRESA se compromete a proteger la información confidencial a la que tenga acceso.
+
+e) LA EMPRESA no empleará en ningún caso los datos de carácter personal que el Usuario ponga a su disposición para prestar servicios distintos a los referidos en el apartado b) del presente documento o, en su caso, para lograr una utilidad propia o distinta a la autorizada por el titular de dichos datos.
+
+f) El Usuario certifica que es mayor de 14 años y que por lo tanto posee la capacidad legal necesaria para la prestación del consentimiento en cuanto al tratamiento de sus datos de carácter personal y todo ello, de conformidad con lo establecido en la presente Política de Privacidad.
+
+g) El Usuario puede, en todo momento, ejercitar los derechos de acceso, rectificación, cancelación, oposición o revocación del consentimiento anteriormente otorgado sobre el tratamiento de sus datos personales, enviando a LA EMPRESA carta debidamente firmada a nuestra dirección postal, antes
+indicada, donde consten claramente sus datos de contacto, a la cual deberá acompañarse fotocopia de su DNI/NIF o documento que acredite su identidad.
+
+h) El Usuario autoriza al tratamiento de los datos personales suministrados, en los términos indicados anteriormente.
+
+            </p>
+            
+         </div>
+
+      </div>
+
+   </div>
+
+</section>
+
+
+
+<!-- reviews section ends -->
+
+<!-- contact section starts  -->
+
+<!-- <section class="contact" id="contact">
+
+   <h1 class="heading">make appointment</h1>
+
+   <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+      <?php 
+         if(isset($message)){
+            foreach($message as $message){
+               echo '<p class="message">'.$message.'</p>';
+            }
+         }
+      ?>
+      <span>your name :</span>
+      <input type="text" name="name" placeholder="enter your name" class="box" required>
+      <span>your email :</span>
+      <input type="email" name="email" placeholder="enter your email" class="box" required>
+      <span>your number :</span>
+      <input type="number" name="number" placeholder="enter your number" class="box" required>
+      <span>appointment date :</span>
+      <input type="datetime-local" name="date" class="box" required>
+      <input type="submit" value="make appointment" name="submit" class="link-btn">
+   </form>  
+
+</section> -->
+
+<!-- contact section ends -->
+
+<!-- footer section starts  -->
+
+<!-- <div class="box">
+   <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3180.574611840676!2d-6.8320790843860255!3d37.139034256252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd11df2be26ab76b%3A0x1b0fb67390b5cbc9!2sCl%C3%ADnica%20Dental%20Isabel%20Carmona!5e0!3m2!1ses!2ses!4v1657101580287!5m2!1ses!2ses" width="500" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+</div> -->
+
+
+
+<section class="footer" id="contacto">
+
+   <div class="box-container container">
+
+      <div class="box"> 
+         <i class="fas fa-phone"></i>
+         <h3>Teléfonos</h3>
+         <p>959536353</p>
+         <p>689245514 (Móvil/Whatsapp)</p>
+      </div>
+      <a href="https://wa.me/34697170319?text=¡Hola!%20Me%20gustaría%20pedir%20hora%20para%20una%20revisión%20/%20consulta.%20Gracias!" class="whatsapp" target="_blank"> <i class="fa fa-whatsapp whatsapp-icon"></i></a>
+      
+      <!-- <div class="box">
+         <i class="fas fa-map-marker-alt"></i>
+         <h3>Dirección</h3>
+         <p>C/ Retama, 9 - B</p>
+      </div> -->
+
+      <div class="box">
+         <i class="fas fa-clock"></i>
+         <h3>Horario</h3>
+         <p>Lunes a Viernes</p>
+         <p>09:30 - 21,00 (horario ininterrumpido)</p>
+      </div>
+
+      <div class="box">
+         <i class="fas fa-envelope"></i>
+         <a href="mailto:fotografiadanielness@gmail.com"></a>
+         <h3>email</h3>
+         <p>isabelcarmonasanchez@hotmail.com</p>
+      </div>
+
+   </div>
+
+   <div class="credit"> &copy; <span>Todos los derechos reservados</span>  </div>
+   
+
+</section>
+
+<!-- footer section ends -->
+
+
+
+
+
+
+
+
+
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+
+</body>
+</html>
