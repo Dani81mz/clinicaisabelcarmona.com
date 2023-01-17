@@ -16,7 +16,7 @@
    box-sizing: border-box;
    outline: none; border:none;
    text-decoration: none !important;
-   text-transform: capitalize;
+   text-transform: none;
 }
 
 *::-webkit-scrollbar{
@@ -149,16 +149,16 @@ h2 span {
 }
 
 .whatsapp {
-   position:fixed;
-   width:60px;
-   height:60px;
-   bottom:40px;
+   position: initial;
+   display: block;
+   width:80px;
+   height:80px;
+   bottom:50px;
    right:40px;
-   background-color:#25d366;
    color:#FFF;
-   border-radius:50px;
+   border-radius:40px;
    text-align:center;
-   font-size:30px;
+   font-size:40px;
    z-index:100;
  }
  
@@ -166,9 +166,16 @@ h2 span {
    margin-top:13px;
  }
 
+.whatsapp-icon {
+   display: flex;
+   font-size: 30px;
+   color: #25d366;
+ }
+
  .container-contact {
    position: relative;
  }
+
 
  .contacto-header {
    position: relative;
@@ -180,12 +187,13 @@ h2 span {
    left: 50%;
  }
 
+
 .contacto-header a {
    display: block;
 }
 
 .box-contact {
-   width: 110px;
+   width: 160px;
    height: 40px;
    background-color: #00b8b8;
    border-radius: 30px;
