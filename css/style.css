@@ -551,7 +551,8 @@ h2 span {
 @media (max-width:767px){
 
    section{
-      padding:3rem 3rem;
+      padding:3rem 1rem;
+      width: 100px;
    }
 
    #menu-btn{
