@@ -566,7 +566,7 @@ h2 span {
    
 
    .header .nav{
-      position: center;
+      position: absolute;
       top:99%; left:0; right:0;
       background-color: var(--white);
       border-top: var(--border);
