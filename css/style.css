@@ -563,7 +563,7 @@ h2 span {
       transform: rotate(180deg);
    }
 
-   .header .visit-text{
+   .visit-text{
       position: absolute;
       top: 99%; left: 0; right: 0;
       background-color: #FFF;
