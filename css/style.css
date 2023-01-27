@@ -544,7 +544,7 @@ h2 span {
    section{
       padding:5rem 2rem;
    }
-   .header .visit-text{
+   /**.header .visit-text{
       position: absolute;
       top: 99%; left: 0; right: 0;
       background-color: #FFF;
@@ -554,7 +554,7 @@ h2 span {
       text-align: center;
       flex-flow: column;
       transition: .2s linear;
-   }
+   }**/
 
 }
 
