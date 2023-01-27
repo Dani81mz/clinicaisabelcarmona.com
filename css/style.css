@@ -552,7 +552,6 @@ h2 span {
 
    section{
       padding:3rem 1rem;
-      width: 100px;
    }
 
    #menu-btn{
@@ -563,7 +562,8 @@ h2 span {
    #menu-btn.fa-times{
       transform: rotate(180deg);
    }
-   .header .nav.active .visit-text{
+
+   .visit-text{
       position: absolute;
       top: 99%; left: 0; right: 0;
       background-color: #FFF;
@@ -574,8 +574,6 @@ h2 span {
       flex-flow: column;
       transition: .2s linear;
    }
-
-   
 
    .header .nav{
       position: absolute;
