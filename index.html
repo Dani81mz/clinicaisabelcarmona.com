@@ -59,6 +59,10 @@ if(isset($_POST['submit'])){
       </div>
    </div>
 
+   <div class="visit-text">
+      <h1>LA PRIMERA VISITA SIN COSTE</h1>
+   </div>
+
 
    <div class="container">
 
@@ -70,13 +74,14 @@ if(isset($_POST['submit'])){
 
          <nav class="nav">
             <a href="#home">Principal</a>
-            <a href="#about">Sobre Nosotros</a>
-            <a href="#services">Equipo/Especialidades</a>
-            <a href="#reviews">Opiniones</a>
+            <a href="#about">Nosotros</a>
+            <a href="#especialidades">Especialidades</a>
+            <a href="#services">Equipo</a>
+            <!--<a href="#reviews">Opiniones</a>-->
             <a href="#contacto">Contacto</a>
-            <a href="#galeria">Galería</a>
+            <a href="servicios.html">Servicios</a>
             <a href="#niños">Niños</a>
-            
+
          </nav>
 
          <!-- <a href="#contact" class="link-btn">make appointment</a> -->
@@ -120,17 +125,33 @@ if(isset($_POST['submit'])){
       <div class="row align-items-center">
 
          <div class="col-md-6 image">
-            <img src="images/dental tools.jpg" class="w-100 mb-5 mb-md-0" alt="">
+            <img src="images/cli2 (2).jpeg" class="w-100 mb-5 mb-md-0" alt="">
          </div>
 
          <div class="col-md-6 content">
-            <span>Sobre nosotros</span>
+            <span>Nosotros</span>
             <h3>Lorem ipsum dolor sit amet.</h3>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam cupiditate vero in provident ducimus. Totam quas labore mollitia cum nisi, sint, expedita rem error ipsa, nesciunt ab provident. Aperiam, officiis!</p>
             <a href="https://wa.me/34689245514?text=¡Hola!%20Me%20gustaría%20pedir%20hora%20para%20una%20revisión%20/%20consulta.%20Gracias!" class="link-btn">Pedir cita</a>
          </div>
 
       </div>
+      <div class="ful-img" id="fulImgBox">
+         <img src="./images/cli1.jpeg" id="fulImg" alt="">
+         <span onclick="closeImg()">X</span>
+      </div>
+      
+         <h1 class="heading">nuestras instalaciones</h1>
+         <h2 id="about"><span>galería de imágenes</span></h2>
+         <div class="img-gallery">
+            <img src="./images/cli1.jpeg">
+            <img src="./images/cli2 (2).jpeg"> 
+            <img src="./images/cli3.jpeg"> 
+            <img src="./images/cli4.jpeg"> 
+            <img src="./images/cli5.jpeg"> 
+            <img src="./images/cli6.jpeg"> 
+         </div>
+         <script src="script.js"></script>
 
    </div>
 
@@ -165,12 +186,12 @@ if(isset($_POST['submit'])){
 
 <section class="services" id="services">
 
-   <h1 class="heading">nuestras especialidades</h1>
+   <h1 class="heading">equipo</h1>
 
    <div class="box-container container">
 
       <div class="box">
-         <img src="./images/esp1.jpg" alt="">
+         <img src="./images/_MG_5276.jpg" alt="">
          <h3>Conservadora</h3>
          <p>María Vázquez</p>
          <a href="#conservadora" class="link-btn">Ir</a>
@@ -211,12 +232,24 @@ if(isset($_POST['submit'])){
          <p>Ana Rodríguez</p>
          <a href="#direccion" class="link-btn">Ir</a>
       </div>
+      <div class="box">
+         <img src="./images/_MG_4011.jpg" alt="">
+         <h3>Coordinación de Tratamientos</h3>
+         <p>Raúl López</p>
+         <a href="#coordinacion" class="link-btn">Ir</a>
+      </div>
 
      
 
    </div>
 
 </section>
+<section class="about" id="especialidades">
+
+<h1 class="heading">especialidades</h1>
+
+</section>
+
 
 <section class="about" id="conservadora">
 
@@ -225,7 +258,7 @@ if(isset($_POST['submit'])){
       <div class="row align-items-center">
 
          <div class="col-md-6 image">
-            <img src="images/esp1.jpg" class="w-100 mb-5 mb-md-0" alt="">
+            <img src="images/_MG_5276.jpg" class="w-100 mb-5 mb-md-0" alt="">
          </div>
 
          <div class="col-md-6 content">
@@ -447,6 +480,58 @@ if(isset($_POST['submit'])){
    </div>
 
 </section>
+<section class="about" id="coordinacion">
+
+   <div class="container">
+
+      <div class="row align-items-center">
+
+         <div class="col-md-6 image">
+            <img src="images/_MG_4011.jpg" class="w-100 mb-5 mb-md-0" alt="">
+         </div>
+
+         <div class="col-md-6 content">
+            <span>Coordinador de Tratamientos</span>
+            <h3 id="coordinacion">Lorem ipsum dolor sit amet.</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam cupiditate vero in provident ducimus. Totam quas labore mollitia cum nisi, sint, expedita rem error ipsa, nesciunt ab provident. Aperiam, officiis!</p>
+            <div class="container-contact">
+               <div class="contacto-header">
+                  <a href="https://wa.me/34689245514?text=¡Hola!%20Me%20gustaría%20pedir%20hora%20para%20una%20revisión%20/%20consulta.%20Gracias!" title="Cita vía WhatsApp" class="link-btn" target="_blank">Pedir cita</a>
+                  <a href="mailto:isabelcarmonasanchez@hotmail.es" title="Contactar por Correo"><i class="fas fa-envelope"></i></a> 
+                  
+                  <a href="tel:34689245514" title="Contactar por Teléfono"><i class="fas fa-phone"></i></a>
+               </div>
+            </div>
+         </div>
+
+      </div>
+
+   </div>
+
+</section>
+
+<section class="about" id="niños">
+
+   <div class="container">
+
+      <div class="row align-items-center">
+
+         <div class="col-md-6 image">
+            <img src="images/niñodentista.jpg" class="w-100 mb-5 mb-md-0" alt="">
+         </div>
+
+         <div class="col-md-6 content">
+            <span>Tratando a los Pequeños</span>
+            <h3>Lorem ipsum dolor sit amet.</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam cupiditate vero in provident ducimus. Totam quas labore mollitia cum nisi, sint, expedita rem error ipsa, nesciunt ab provident. Aperiam, officiis!</p>
+            <a href="#contact" class="link-btn">Pedir cita</a> 
+         </div>
+
+      </div>
+
+   </div>
+
+</section>
 
 <!-- services section ends -->
 
@@ -454,22 +539,7 @@ if(isset($_POST['submit'])){
 
 <!-- <section class="gallery"> -->
 
-<div class="ful-img" id="fulImgBox">
-   <img src="./images/cli1.jpeg" id="fulImg" alt="">
-   <span onclick="closeImg()">X</span>
-</div>
 
-   <h1 class="heading">nuestras instalaciones</h1>
-   <h2 id="galeria"><span>galería de imágenes</span></h2>
-   <div class="img-gallery">
-      <img src="./images/cli1.jpeg">
-      <img src="./images/cli2 (2).jpeg"> 
-      <img src="./images/cli3.jpeg"> 
-      <img src="./images/cli4.jpeg"> 
-      <img src="./images/cli5.jpeg"> 
-      <img src="./images/cli6.jpeg"> 
-   </div>
-   <script src="script.js"></script>
 
   
 
@@ -479,7 +549,7 @@ if(isset($_POST['submit'])){
 
 <!-- reviews section starts  -->
 
-<section class="reviews" id="reviews">
+<!--<section class="reviews" id="reviews">
 
    <h1 class="heading"> clientes satisfechos </h1>
 
@@ -489,14 +559,13 @@ if(isset($_POST['submit'])){
          <img src="images/pic-1.png" alt="">
          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos, iure? Nemo est aspernatur voluptatum id, laboriosam asperiores iure omnis alias?</p>
          <div class="stars">
-            <!--<i class="fas fa-star"></i>-->
+            <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
             <i class="fas fa-star-half-alt"></i>
          </div>
          <h3>rené</h3>
-         <!-- <span>cliente satis</span> -->
       </div>
 
       <div class="box">
@@ -510,7 +579,6 @@ if(isset($_POST['submit'])){
             <i class="fas fa-star-half-alt"></i>
          </div>
          <h3>josé</h3>
-         <!-- <span>satisfied client</span> -->
       </div>
 
       <div class="box">
@@ -524,12 +592,11 @@ if(isset($_POST['submit'])){
             <i class="fas fa-star-half-alt"></i>
          </div>
          <h3>john frank</h3>
-         <!-- <span>satisfied c</span> -->
       </div>
 
    </div>
 
-</section>
+</section>-->
 
 <!-- reviews section ends -->
 

@@ -52,6 +52,14 @@ section{
    margin-bottom: 3rem;
 }
 
+.visit-text{
+   text-align: center;
+   font-size: 5rem;
+   color: #00b8b8;
+   margin-top: 4rem;
+   
+}
+
 /*galería de imágenes*/
 
 .heading, h2 {
@@ -565,6 +573,18 @@ h2 span {
       text-align: center;
       flex-flow: column;
       clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+      transition: .2s linear;
+   }
+
+   .header .visit-text{
+      position: absolute;
+      top: 99%; left: 0; right: 0;
+      background-color: #FFF;
+      border-top: var(--border);
+      border-bottom: var(--border);
+      padding: 1rem 0;
+      text-align: center;
+      flex-flow: column;
       transition: .2s linear;
    }
 
