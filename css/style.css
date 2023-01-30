@@ -564,7 +564,7 @@ h2 span {
    }
 
    .visit-text{
-      position: absolute;
+      position: center;
       top: 99%; left: 0; right: 0;
       background-color: #FFF;
       border-top: var(--border);
