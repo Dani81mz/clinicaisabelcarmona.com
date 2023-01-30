@@ -552,7 +552,6 @@ h2 span {
 
    section{
       padding:3rem 1rem;
-      align-items: flex-end;
    }
 
    #menu-btn{
@@ -573,7 +572,7 @@ h2 span {
       padding: 1rem 0;
       text-align: center;
       flex-flow: column;
-      transition: .2s linear;
+      transition: none;
    }
 
    .header .nav{
