@@ -45,7 +45,7 @@ section{
 
 .heading{
    text-align: center;
-   font-size: 4rem;
+   font-size: 8rem;
    color:var(--black);
    text-transform: uppercase;
    font-weight: bolder;
@@ -151,7 +151,7 @@ h2 span {
 }
 
 .header{
-   padding: 0.5rem;
+   padding: 0.5rem;;
    border-bottom: var(--border);
 }
 
@@ -271,7 +271,7 @@ h2 span {
 }
 
 .home .content h3{
-   font-size: 8rem;
+   font-size: 6rem;
    text-transform: uppercase;
    color:var(--black);
 }
