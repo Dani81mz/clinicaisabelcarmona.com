@@ -555,7 +555,7 @@ h2 span {
    }
 
    #menu-btn{
-      display: flex;
+      display: contents;
       transition: .2s linear;
    }
 
