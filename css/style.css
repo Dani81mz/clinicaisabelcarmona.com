@@ -65,7 +65,7 @@ section{
    text-align: center;
    position: relative;
    width: 80%;
-   margin: 30px auto;
+   margin: 50px auto;
 }
 
 /*body {
@@ -563,7 +563,7 @@ h2 span {
       transform: rotate(180deg);
    }
 
-   .visit-text{
+   /**.visit-text{
       position: center;
       top: 99%; left: 0; right: 0;
       background-color: #FFF;
@@ -573,7 +573,7 @@ h2 span {
       text-align: center;
       flex-flow: column;
       transition: .2s linear;
-   }
+   }**/
 
    .header .nav{
       position: absolute;
