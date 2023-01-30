@@ -552,7 +552,17 @@ h2 span {
 
    section{
       padding:3rem 1rem;
-      align-items: center;
+   }
+   .visit-text{
+      position: center;
+      top: 99%; left: 0; right: 0;
+      background-color: #FFF;
+      border-top: var(--border);
+      border-bottom: var(--border);
+      padding: 1rem 0;
+      text-align: center;
+      flex-flow: column;
+      transition: .2s linear;
    }
 
    #menu-btn{
@@ -564,17 +574,7 @@ h2 span {
       transform: rotate(180deg);
    }
 
-   #visit-text{
-      position: center;
-      top: 99%; left: 0; right: 0;
-      background-color: #FFF;
-      border-top: var(--border);
-      border-bottom: var(--border);
-      padding: 1rem 0;
-      text-align: center;
-      flex-flow: column;
-      transition: .2s linear;
-   }
+   
 
    .header .nav{
       position: absolute;
