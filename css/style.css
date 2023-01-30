@@ -552,6 +552,7 @@ h2 span {
 
    section{
       padding:3rem 1rem;
+      align-items: center;
    }
 
    #menu-btn{
