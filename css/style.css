@@ -562,7 +562,7 @@ h2 span {
       padding: 1rem 0;
       text-align: center;
       flex-flow: column;
-      transition: .2s linear;
+      /**transition: .2s linear;**/
    }
 
    #menu-btn{
