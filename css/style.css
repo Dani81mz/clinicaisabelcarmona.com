@@ -555,7 +555,7 @@ h2 span {
    }
 
    #menu-btn{
-      display: inline-block;
+      display: flex;
       transition: .2s linear;
    }
 
@@ -572,7 +572,7 @@ h2 span {
       padding: 1rem 0;
       text-align: center;
       flex-flow: column;
-      transition: none;
+      transition: .2s linear;
    }
 
    .header .nav{
