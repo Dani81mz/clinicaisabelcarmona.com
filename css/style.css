@@ -548,21 +548,26 @@ h2 span {
 
 }
 
-@media all and (max-width:768px){
+@media (max-width:991px){
+
+   html{
+      font-size: 55%;
+   }
+
+   .header .link-btn{
+      display: none;
+   }
 
    section{
-      padding:1rem 1rem;
+      padding:5rem 2rem;
    }
-   .visit-text{
-      position: center;
-      top: 99%; left: 0; right: 0;
-      background-color: #FFF;
-      border-top: var(--border);
-      border-bottom: var(--border);
-      padding: 1rem 0;
-      text-align: center;
-      flex-flow: column;
-      /**transition: .2s linear;**/
+
+}
+
+@media (max-width:768px){
+
+   section{
+      padding:3rem 1rem;
    }
 
    #menu-btn{
@@ -573,8 +578,6 @@ h2 span {
    #menu-btn.fa-times{
       transform: rotate(180deg);
    }
-
-   
 
    .header .nav{
       position: absolute;
@@ -589,8 +592,6 @@ h2 span {
       transition: .2s linear;
    }
 
-   
-
    .header .nav.active{
       clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
    }
@@ -601,7 +602,7 @@ h2 span {
    }
 
    .home{
-      background-position: center;
+      background-position: left;
    }
 
    .home .content{
