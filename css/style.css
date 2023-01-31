@@ -602,7 +602,7 @@ h2 span {
    }
 
    .home{
-      background-position: center;
+      background-position: auto;
    }
 
    .home .content{
