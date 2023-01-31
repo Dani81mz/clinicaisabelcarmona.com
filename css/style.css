@@ -531,65 +531,97 @@ h2 span {
 
 /* media queries  */
 
-@media(max-width:700px) {
-    
-}
+@media (max-width:991px){
 
-/* fin blog content  */
+   html{
+      font-size: 55%;
+   }
 
+   .header .link-btn{
+      display: none;
+   }
 
-/* End Footer */
-
-/* Media */
-@media screen and (min-width:1205px) {
-    .container {
-        max-width: 1200px;
-    }
-
-    .hero-content {
-        max-width: 550px;
-    }
-
-    .about-content {
-        max-width: 420px;
-    }
-
-    .service-cards {
-        max-width: 900px;
-        margin-left: auto;
-    }
+   section{
+      padding:5rem 2rem;
+   }
+   
 
 }
 
-@media screen and (max-width:1000px) {
-    .toggleMenu {
-        background-image: url(./Images/38_-_menu_bar_lines_option_list_hamburger_web-512-2959488704.png);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: 30px;
-        width: 30px;
-        height: 30px;
-        transition: background-size 0.3s ease-in-out;
-        -webkit-transition: background-size 0.3s ease-in-out;
-        -moz-transition: background-size 0.3s ease-in-out;
-        -ms-transition: background-size 0.3s ease-in-out;
-        -o-transition: background-size 0.3s ease-in-out;
-        z-index: 1000;
-    }
+@media (max-width:767px){
 
-    .toggleMenu.active {
-        position: fixed;
-        right: 5%;
-        background-image: url(./imgs/close.svg);
-        background-size: 25px;
-    }
+   section{
+      padding:3rem 1rem;
+   }
+   .visit-text{
+      position: center;
+      top: 99%; left: 0; right: 0;
+      background-color: #FFF;
+      border-top: var(--border);
+      border-bottom: var(--border);
+      padding: 1rem 0;
+      text-align: center;
+      flex-flow: column;
+      /**transition: .2s linear;**/
+   }
 
-    .navigation {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        position: absolute;
-        inset: 0;
-        margin: auto;
-        min-height: 0;
-        opacity: 0;
+   #menu-btn{
+      display: inline-block;
+      transition: .2s linear;
+   }
+
+   #menu-btn.fa-times{
+      transform: rotate(180deg);
+   }
+
+   
+
+   .header .nav{
+      position: absolute;
+      top:99%; left:0; right:0;
+      background-color: var(--white);
+      border-top: var(--border);
+      border-bottom: var(--border);
+      padding:1rem 0;
+      text-align: center;
+      flex-flow: column;
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+      transition: .2s linear;
+   }
+
+   
+
+   .header .nav.active{
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+   }
+
+   .header .nav a{
+      margin:1rem 0;
+      font-size: 2rem;
+   }
+
+   .home{
+      background-position: center;
+   }
+
+   .home .content{
+      width: auto;
+   }
+
+}
+
+@media (max-width:450px){
+
+   html{
+      font-size: 50%;
+   }
+
+   .home .content h3{
+      font-size: 4rem;
+   }
+
+   .heading{
+      font-size: 3rem;
+   }
+
+}
