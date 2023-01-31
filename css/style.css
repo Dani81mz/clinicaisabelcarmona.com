@@ -40,7 +40,7 @@ html{
 }
 
 section{
-   padding:0.01rem 2rem;
+   padding:2rem 2rem;
 }
 
 .heading{
@@ -357,7 +357,7 @@ h2 span {
 
 .process .box-container .box img{
    height: 20rem;
-   margin:1rem 0;
+   margin: 1rem 0;
 }
 
 .process .box-container .box h3{
@@ -605,7 +605,7 @@ h2 span {
    }
 
    .home .content{
-      width: auto;
+      width: fit-content;
    }
 
 }
