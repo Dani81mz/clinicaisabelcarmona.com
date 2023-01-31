@@ -548,7 +548,7 @@ h2 span {
 
 }
 
-@media (max-width:767px){
+@media all and (max-width:768px){
 
    section{
       padding:1rem 1rem;
@@ -605,7 +605,7 @@ h2 span {
    }
 
    .home .content{
-      width: center;
+      width: auto;
    }
 
 }
