@@ -243,7 +243,7 @@ h2 span {
 }
 
 .header .nav a{
-   margin:0 1rem;
+   margin: 0, 1rem;
    font-size: 1.7rem;
    color:var(--black);
 }
@@ -605,7 +605,7 @@ h2 span {
    }
 
    .home .content{
-      width: fit-content;
+      width: auto;
    }
 
 }
