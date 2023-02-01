@@ -40,7 +40,7 @@ html{
 }
 
 section{
-   padding:1rem 1rem;
+   padding:1rem 2rem;
 }
 
 .heading{
@@ -68,9 +68,9 @@ section{
    margin: 50px auto;
 }
 
-/*body {
+body {
    background-color: #ecf4fb;
-}*/
+}
 
 h2::before {
    content: "";
