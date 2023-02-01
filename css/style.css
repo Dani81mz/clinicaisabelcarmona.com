@@ -151,7 +151,7 @@ h2 span {
 }
 
 .header{
-   padding: 0.5rem;;
+   padding: 0.5rem;
    border-bottom: var(--border);
 }
 
@@ -261,7 +261,7 @@ h2 span {
 
 .home{
    background:url(../images/cli6_1.jpg) no-repeat;
-   background-size: auto;
+   background-size: cover;
    background-position: center;
 }
 
