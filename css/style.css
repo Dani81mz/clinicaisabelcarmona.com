@@ -531,22 +531,7 @@ h2 span {
 
 /* media queries  */
 
-@media (max-width:991px){
 
-   html{
-      font-size: 55%;
-   }
-
-   .header .link-btn{
-      display: none;
-   }
-
-   section{
-      padding:5rem 2rem;
-   }
-   
-
-}
 
 @media (max-width:991px){
 
@@ -602,11 +587,19 @@ h2 span {
    }
 
    .home{
-      background-position: auto;
+      background-position: center;
    }
 
    .home .content{
       width: auto;
+   }
+
+   .h1{
+      text-align: center;
+   }
+
+   .background img{
+      align-items: center;
    }
 
 }
