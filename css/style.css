@@ -261,8 +261,8 @@ h2 span {
 
 .home{
    background:url(../images/cli6_1.jpg) no-repeat;
-   background-size: cover;
-   background-position: auto;
+   background-size: auto;
+   background-position: center;
 }
 
 .home .content{
