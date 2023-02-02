@@ -189,7 +189,7 @@ h2 span {
    display: flex;
    flex-direction: row;
    align-items: center;
-   transform: translateX(-5%);
+   transform: translateX(-20%);
    padding: 0px;
    left: 50%;
  }
@@ -244,7 +244,7 @@ h2 span {
 
 .header .nav a{
    margin:0 1rem;
-   font-size: 1.7rem;
+   font-size: 2rem;
    color:var(--black);
 }
 
@@ -260,13 +260,13 @@ h2 span {
 }
 
 .home{
-   background:url(../images/cli6_1.jpg);
+   background:url(../images/cli6_1.jpg) no-repeat;
    background-size: cover;
    background-position: center;
 }
 
 .home .content{
-   width: 70rem;
+   width: 55rem;
    padding:2rem;
 }
 
