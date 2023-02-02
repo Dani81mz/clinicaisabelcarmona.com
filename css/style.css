@@ -594,25 +594,7 @@ h2 span {
       width: auto;
    }
 
-   .container-contact {
-      position: relative;
-    }
    
-   
-    .contacto-header {
-      position: relative;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      transform: translateX(-5%);
-      padding: 0px;
-      left: 50%;
-    }
-   
-   
-   .contacto-header a {
-      display: block;
-   }
 
 }
 
