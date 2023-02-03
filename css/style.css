@@ -40,7 +40,7 @@ html{
 }
 /**cambio añadido**/
 
-body {
+.body {
    height:auto;
    align-content: center;
    }
