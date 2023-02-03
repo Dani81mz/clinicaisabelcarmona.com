@@ -564,6 +564,7 @@ h2 span {
    #menu-btn{
       display: block;
       transition: .2s linear;
+      align-items: flex-end;
    }
 
    #menu-btn.fa-times{
