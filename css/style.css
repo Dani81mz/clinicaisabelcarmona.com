@@ -39,6 +39,11 @@ html{
    scroll-padding-top: 6.5rem;
 }
 /**cambio añadido**/
+
+body {
+   height:auto;
+   }
+
 .header{
    display: block;
    align-items: center;
