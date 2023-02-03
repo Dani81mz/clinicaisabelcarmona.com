@@ -562,7 +562,7 @@ h2 span {
    }
 
    #menu-btn{
-      display: block;
+      display: inline-block;
       transition: .2s linear;
    }
 
@@ -595,7 +595,7 @@ h2 span {
    }
 
    .home{
-      background-position: 90%;
+      background-position: center;
    }
 
    .home .content{
