@@ -595,11 +595,11 @@ h2 span {
    }
 
    .home{
-      background-position: center;
+      background-position: 90%;
    }
 
    .home .content{
-      width: max-content;
+      width: auto;
    }
 
    
