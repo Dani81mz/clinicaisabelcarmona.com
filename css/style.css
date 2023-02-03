@@ -40,9 +40,9 @@ html{
 }
 /**cambio añadido**/
 
-.body {
+body {
    height:auto;
-   align-content: center;
+   align-items: center;
    }
 
 .header{
@@ -170,8 +170,6 @@ h2 span {
 .header{
    padding: 0.5rem;
    border-bottom: var(--border);
-   margin-right: 0%;
-   align-items: center;
 }
 
 .whatsapp {
