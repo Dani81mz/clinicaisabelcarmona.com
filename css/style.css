@@ -274,6 +274,7 @@ h2 span {
    color:var(--black);
    cursor: pointer;
    display: none;
+   border-right: 20px;
 }
 
 .home{
