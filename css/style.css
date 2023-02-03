@@ -39,16 +39,13 @@ html{
    scroll-padding-top: 6.5rem;
 }
 /**cambio añadido**/
+
 .header{
    display: block;
    align-items: center;
+   position: absolute;
 }
 
-.container{
-   position: absolute;
-   width: 794px;
-   height: 600px;
-}
 
 /**end of cambio añadido**/
 
