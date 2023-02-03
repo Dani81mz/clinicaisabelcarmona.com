@@ -38,11 +38,21 @@ html{
    scroll-behavior: smooth;
    scroll-padding-top: 6.5rem;
 }
-
+/**cambio añadido**/
 .header{
    display: block;
    align-items: center;
 }
+
+.container{
+   position: absolute;
+   width: 794px;
+   height: 600px;
+}
+
+/**end of cambio añadido**/
+
+
 
 
 section{
@@ -564,7 +574,6 @@ h2 span {
    #menu-btn{
       display: block;
       transition: .2s linear;
-      align-items: flex-end;
    }
 
    #menu-btn.fa-times{
