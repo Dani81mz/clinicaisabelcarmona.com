@@ -170,7 +170,7 @@ h2 span {
 .header{
    padding: 0.5rem;
    border-bottom: var(--border);
-   margin-right: auto;
+   margin-right: 0%;
    align-items: center;
 }
 
