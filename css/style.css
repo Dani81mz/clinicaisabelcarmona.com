@@ -558,11 +558,11 @@ h2 span {
 @media (max-width:768px){
 
    section{
-      padding:3rem 1rem;
+      padding:1rem 1rem;
    }
 
    #menu-btn{
-      display: inline-block;
+      display: block;
       transition: .2s linear;
    }
 
@@ -583,7 +583,6 @@ h2 span {
       clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
       transition: .2s linear;
    }
-   
 
    .header .nav.active{
       clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
