@@ -44,6 +44,11 @@ html{
    align-items: center ;
 }
 
+.header .fixed-top{
+   display: block;
+   align-items: center;
+}
+
 section{
    padding:1rem 2rem;
 }
@@ -567,6 +572,11 @@ h2 span {
 
    #menu-btn.fa-times{
       transform: rotate(180deg);
+   }
+
+   .header{
+      display: block;
+      align-items: center ;
    }
 
    .header .nav{
