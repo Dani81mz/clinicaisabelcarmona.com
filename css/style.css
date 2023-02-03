@@ -39,6 +39,11 @@ html{
    scroll-padding-top: 6.5rem;
 }
 
+.header{
+   display: block;
+   align-items: center ;
+}
+
 section{
    padding:1rem 2rem;
 }
@@ -189,7 +194,7 @@ h2 span {
    display: flex;
    flex-direction: row;
    align-items: center;
-   transform: translateX(-20%);
+   transform: translateX(-5%);
    padding: 0px;
    left: 50%;
  }
@@ -215,13 +220,13 @@ h2 span {
 
 }
 
- /*.icono-placeholder {
+ /**.icono-placeholder {
    padding: 0.25em 0.6em;
    border-radius: 0.3rem;
    border: 1px solid #d3d6e4;
    text-align: center;
    box-shadow: 0 2px 3px rgba(0 0 0 / 0.15);
- }*/
+ }**/
 
 .header.active{
    background-color: var(--white);
@@ -266,7 +271,7 @@ h2 span {
 }
 
 .home .content{
-   width: 55rem;
+   width: 100rem;
    padding:2rem;
 }
 
@@ -326,7 +331,7 @@ h2 span {
 
 .services .box-container .box img{
    margin:1rem 0;
-   height: 20rem;
+   height: 25rem;
 }
 
 .services .box-container .box h3{
@@ -356,7 +361,7 @@ h2 span {
 }
 
 .process .box-container .box img{
-   height: 20rem;
+   height: 15rem;
    margin:1rem 0;
 }
 
@@ -372,7 +377,7 @@ h2 span {
    line-height: 2;
 }
 
-.reviews{
+/**.reviews{
    background-color: var(--light-bg);
 }
 
@@ -425,7 +430,7 @@ h2 span {
 .reviews .box-container .box span{
    color:var(--light-color);
    font-size: 1.5rem;
-}
+}**/
 
 .contact form{
    border-radius: .5rem;
