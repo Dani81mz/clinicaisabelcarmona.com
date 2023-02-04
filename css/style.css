@@ -197,12 +197,12 @@ h2 span {
  }
 
  .container-contact {
-   position: relative;
+   position: fixed;
  }
 
 
  .contacto-header {
-   position: relative;
+   position: fixed;
    display: flex;
    flex-direction: row;
    align-items: center;
