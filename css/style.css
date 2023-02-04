@@ -197,8 +197,7 @@ h2 span {
  }
 
  .container-contact {
-   position: sticky;
-   align-items: center;
+   position: relative;
  }
 
 
