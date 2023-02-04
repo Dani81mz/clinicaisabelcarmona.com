@@ -554,9 +554,13 @@ h2 span {
       font-size: 2rem;
    }
 
+   .container-contact{
+      align-items: center;
+      position: relative;
+   }
+
    .home{
       background-position: center;
-      align-items: center;
    }
 
    .home .content{
