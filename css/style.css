@@ -540,7 +540,6 @@ h2 span {
       border-bottom: var(--border);
       padding:1rem 0;
       text-align: center;
-      align-items: center;
       flex-flow: column;
       clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
       transition: .2s linear;
@@ -557,6 +556,7 @@ h2 span {
 
    .home{
       background-position: center;
+      align-items: center;
    }
 
    .home .content{
