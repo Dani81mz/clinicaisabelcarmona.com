@@ -197,7 +197,7 @@ h2 span {
  }
 
  .container-contact {
-   position: relative;
+   position: inherit;
  }
 
 
@@ -206,14 +206,14 @@ h2 span {
    display: flex;
    flex-direction: row;
    align-items: center;
-  /** transform: translateX(-5%);**/
+   transform: translateX(-5%);
    padding: 0px;
    left: 50%;
  }
 
 
 .contacto-header a {
-   display: block;
+   display: flex;
 }
 
 .box-contact {
