@@ -512,20 +512,7 @@ h2 span {
       padding:5rem 2rem;
    }
 
-   .contacto-header {
-      position: relative;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      transform: translateX(-5%);
-      padding: 0px;
-      left: 50%;
-    }
    
-   
-   .contacto-header a {
-      display: flex;
-   }
 
 }
 
@@ -553,6 +540,7 @@ h2 span {
       border-bottom: var(--border);
       padding:1rem 0;
       text-align: center;
+      align-items: center;
       flex-flow: column;
       clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
       transition: .2s linear;
