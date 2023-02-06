@@ -75,6 +75,7 @@ section{
    font-size: 5rem;
    color: #00b8b8;
    margin-top: 6rem;
+   margin-left: 5%;
 }
 
 /*galería de imágenes*/
@@ -322,6 +323,13 @@ h2 span {
   
 }
 
+/**.texto-nosotros{
+   align-items: start;
+   text-align: center;
+   justify-content: center;
+   position: relative;
+}**/
+
 .about .content p{
    padding:1rem 0;
    font-size: 1.6rem;
@@ -562,7 +570,7 @@ h2 span {
    }
 
    .contacto-header{
-     margin-left: -50px;
+     margin-left: -55px;
    }
 
    
