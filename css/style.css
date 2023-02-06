@@ -564,14 +564,10 @@ h2 span {
    }
 
    .home .content{
-      width: auto;
+      width: 50%;
    }
 
-   .header{
-      width: auto;
-      align-items: center;
-   }
-
+   
    
 
 }
