@@ -51,9 +51,7 @@ body {
    align-items: center;
 }
 
-.visit-text h1{
-   font-size: 2rem;
-}
+
 
 
 /**end of cambio añadido**/
@@ -583,12 +581,11 @@ h2 span {
    }
 
    .header{
-      margin-top: -18%;
+      margin-top: -20%;
    }
 
-   .header .visit-text p{
-      align-items: center;
-      justify-content: left;
+   .visit-text h1{
+      font-size: 1.8rem;
    }
 
    
