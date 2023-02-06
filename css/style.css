@@ -567,6 +567,11 @@ h2 span {
       width: auto;
    }
 
+   .header{
+      width: auto;
+      align-items: center;
+   }
+
    
 
 }
