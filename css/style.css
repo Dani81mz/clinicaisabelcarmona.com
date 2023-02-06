@@ -559,9 +559,8 @@ h2 span {
       position: relative;
    }
 
-   .header-contact{
+   .header fixed-top{
       align-items: center;
-      position: relative;
    }
 
    .home{
