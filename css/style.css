@@ -560,11 +560,11 @@ h2 span {
    }
 
    .home{
-      background-position: center;
+      background-position: left;
    }
 
    .home .content{
-      width: 50%;
+      width: auto;
    }
 
    
