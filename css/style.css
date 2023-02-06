@@ -559,8 +559,13 @@ h2 span {
       position: relative;
    }
 
+   .header-contact{
+      align-items: center;
+      position: relative;
+   }
+
    .home{
-      background-position: left;
+      background-position: center;
    }
 
    .home .content{
