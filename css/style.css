@@ -43,6 +43,7 @@ html{
 body {
    height:auto;
    align-items: center;
+   overflow: hidden;
    }
 
 .header{
