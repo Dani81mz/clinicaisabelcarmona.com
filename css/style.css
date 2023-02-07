@@ -72,6 +72,14 @@ section{
    margin-bottom: 1rem;
 }
 
+.heading .h1 {
+   text-align: center;
+   position: relative;
+   width: 80%;
+   margin: 50px auto;
+   font-size: 2rem;
+}
+
 .visit-text {
    text-align: center;
    font-size: 3rem;
@@ -574,6 +582,8 @@ h2 span {
 
    .contacto-header{
      margin-left: -55px;
+     margin-top: 25%;
+     width: -10%;
    }
 
    .container .p{
