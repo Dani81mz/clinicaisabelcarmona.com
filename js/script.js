@@ -32,3 +32,4 @@ fulImg = document.getElementById("fulImg");
 function closeImg(){
    fulImgBox.style.display = "none";
 }
+
